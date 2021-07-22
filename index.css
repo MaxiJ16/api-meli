@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-general {
+  width: 100%;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #fff159;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  padding: 12px 0;
+}
+
+.search-input{
+  width: 395px;
+  padding: 12px;
+}
+
+.search-button{
+  font-weight: bold;
+  padding: 12px 35px;
+}
+
+.search-input, .search-button {
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+/* SECTION - GENERAL */
+
+.section-general {
+  max-width: 510px;
+  margin: 0 auto;
+}
+
+.title-section{
+  font-weight: normal;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article {
+  border: 1px solid #000000;
+  border-radius: 4px;
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.article-link {
+  text-decoration: none;
+  color: black;
+}
+
+.article > .article-img {
+  max-width: 160px;
+  max-height: 160px;
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+.article-content > h4 {
+  margin: 0;
+}
+
+.article-content > .article-sell {
+  margin-top: 30px;
+}
+
+.article-price {
+  font-weight: bold;
+  font-size: 28px;
+  color: #5791A4;
+  padding: 13px 15px 84px;
+}

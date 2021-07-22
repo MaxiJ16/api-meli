@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumiendo API MELI</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script async src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container-general">
+
+      <header class="header">
+        <form class="search-form">
+          <input type="text" class="search-input" name="busqueda" placeholder="Lavarropas...">
+          <button class="search-button">Buscar</button>
+        </form>
+      </header>
+
+      <section class="section-general">
+
+        <h4 class="title-section">Resultados: <span class="results-count"></span></h4>
+        
+        <div class="articles"></div>
+
+        <template id="result-item-template">
+          <a href="" class="article-link">
+            <article class="article">
+              <img src="" alt="" class="article-img"/>
+              <div class="article-content">
+                <h4 class="article-title">Nombre del producto</h4>
+                <span class="article-condition">Nuevo</span>
+                <span class="article-sell">Vendidos: <span class="sell-number"></span></span>
+              </div>
+              <span class="article-price">$1111</span>
+            </article>
+          </a>
+        </template>
+
+      </section>
+    </div>
+  </body>
+</html>
