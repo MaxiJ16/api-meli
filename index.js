@@ -5,7 +5,6 @@ function eliminarResultados(){
 }
 
 function mostrarResultados(results) {
-  // console.log(results)
   const contenedor = document.querySelector(".articles");
   const template = document.querySelector("#result-item-template");
 
