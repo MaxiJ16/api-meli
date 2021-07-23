@@ -1,3 +1,9 @@
+function eliminarResultados(){
+  const buttonEl = document.querySelector(".search-button");
+  const resultsEl = document.querySelector(".articles");
+  buttonEl.addEventListener("click", () => resultsEl.innerHTML = "");
+}
+
 function mostrarResultados(results) {
   // console.log(results)
   const contenedor = document.querySelector(".articles");
@@ -7,13 +13,13 @@ function mostrarResultados(results) {
   const resultEl = document.querySelector(".results-count");
   resultEl.textContent = results.paging.total;
 
-  for(const r of results.results){
+  for (const r of results.results) {
     //link del producto
     const linkEl = template.content.querySelector(".article-link");
-    linkEl.href = r.permalink; 
+    linkEl.href = r.permalink;
     //imágen del producto
     const imgEl = template.content.querySelector(".article-img");
-    imgEl.src = r.thumbnail; 
+    imgEl.src = r.thumbnail;
     //título del producto
     const titleEl = template.content.querySelector(".article-title");
     titleEl.textContent = r.title;
@@ -26,12 +32,10 @@ function mostrarResultados(results) {
     //precio del producto
     const priceEl = template.content.querySelector(".article-price");
     priceEl.textContent = "$" + r.price;
-    
 
     const clone = document.importNode(template.content, true);
     contenedor.appendChild(clone);
   }
-
 }
 
 function main() {
@@ -39,6 +43,7 @@ function main() {
 
   formEl.addEventListener("submit", (evento) => {
     evento.preventDefault();
+    eliminarResultados();
     const form = evento.target;
     const palabraABuscar = form.busqueda.value;
 

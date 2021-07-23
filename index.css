@@ -18,17 +18,19 @@ body {
 
 .header {
   background-color: #fff159;
-  display: flex;
-  justify-content: center;
+  padding: 12px 20px;
 }
 
 .search-form {
-  padding: 12px 0;
+  display: flex;
+  max-width: 510px;
+  margin: 0 auto;
 }
 
-.search-input{
-  width: 395px;
+.search-input {
   padding: 12px;
+  flex-grow: 1;
+  margin-right: 1rem;
 }
 
 .search-button{
@@ -46,16 +48,17 @@ body {
 .section-general {
   max-width: 510px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media(min-width:769px){
+  .section-general  {
+    padding: 0;
+  }
 }
 
 .title-section{
   font-weight: normal;
-}
-
-.articles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .article {
@@ -71,11 +74,12 @@ body {
 }
 
 .article > .article-img {
-  max-width: 160px;
-  max-height: 160px;
-  margin-right: 5px;
-  padding: 5px;
+  max-width: 110px;
+  max-height: 140px;
+  margin-right: 0.5rem;
+  padding: 1.2rem;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .article-content {
@@ -86,6 +90,13 @@ body {
 
 .article-content > h4 {
   margin: 0;
+  font-size: 14px;
+}
+
+@media(min-width:769px){
+  .article-content > h4 {
+    font-size: 1rem;
+  }
 }
 
 .article-content > .article-sell {
@@ -93,8 +104,14 @@ body {
 }
 
 .article-price {
+  font-size: 1.3rem;
   font-weight: bold;
-  font-size: 28px;
   color: #5791A4;
-  padding: 13px 15px 84px;
+  padding: 15px 10px 0 10px;
+}
+
+@media(min-width:769px){
+  .article-price{
+    font-size: 1.75rem;
+  }
 }
